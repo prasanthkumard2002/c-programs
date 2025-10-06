@@ -1,35 +1,17 @@
 #include<stdio.h>
-#include<stdlib.h>
 int main()
 {
-    int n;
-    int *revarr;
     int temp;
-    printf("enter number of array elements");
-    scanf("%d",&n);
-    revarr=(int*)malloc(n*sizeof(int));
-    for(int i=0;i<n;i++)
+    int arr[5]={11,22,33,44,55};
+    for(int i=0,j=5-1;i<=j;i++,j--)
     {
-        printf("enter %d array values ",i);
-        scanf("%d",revarr+i);
+        temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
     }
-    for(int i=0;i<n;i++)
+    for(int i=0;i<5;i++)
     {
-        printf("%d\t",*(revarr+i));
-    }
-
-    for(int i=0,j=n-1;i<j;i++,j--)
-    {
-        temp=revarr[i];
-        revarr[i]=revarr[j];
-        revarr[j]=temp;
+        printf("%d\t",arr[i]);
     }
 
-    printf("reverse array element:");
-    for(int i=0;i<n;i++)
-    {
-        printf("%d\t",*(revarr+i));
-    }
-    free(revarr);
-    return 0;
 }
