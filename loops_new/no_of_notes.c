@@ -1,0 +1,70 @@
+#include<stdio.h>
+int main()
+{
+    int amount;
+    int note_2000,note_500,note_200,note_100,note_50,note_20,note_10,note_5,note_2,note_1;
+    note_2000=note_500=note_200=note_100=note_50=note_20=note_10=note_5=note_2=note_1=0;
+    printf("enter amount:");
+    scanf("%d",&amount);
+    if(amount>=2000)
+    {
+        note_2000=amount/2000;
+        amount=amount%2000;
+    }
+    if(amount>=500)
+    {
+        note_500=amount/500;
+        amount=amount%500;
+    }
+    if(amount>=200)
+    {
+        note_200=amount/200;
+        amount=amount%200;
+    }
+    if(amount>=100)
+    {
+        note_100=amount/100;
+        amount=amount%100;
+    }
+    if(amount>=50)
+    {
+        note_50=amount/50;
+        amount=amount%50;
+    }
+    if(amount>=20)
+    {
+        note_20=amount/20;
+        amount=amount%20;
+    }
+    if(amount>=10)
+    {
+        note_10=amount/10;
+        amount=amount%10;
+    }
+    if(amount>=5)
+    {
+        note_5=amount/5;
+        amount=amount%5;
+    }
+    if(amount>=2)
+    {
+        note_2=amount/2;
+        amount=amount%2;
+    }
+    if(amount>=1)
+    {
+        note_1=amount/1;
+        amount=amount%1;
+    }
+    printf("2000_notes=%d\n",note_2000);
+    printf("500_notes=%d\n",note_500);
+    printf("200_notes=%d\n",note_200);
+    printf("100_notes=%d\n",note_100);
+    printf("50_notes=%d\n",note_50);
+    printf("20_notes=%d\n",note_20);
+    printf("10_notes=%d\n",note_10);
+    printf("5_notes=%d\n",note_5);
+    printf("2_notes=%d\n",note_2);
+    printf("1_notes=%d\n",note_1);
+    return 0;
+}
